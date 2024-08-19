@@ -1,13 +1,10 @@
 name: Build Binary and Run Tests
 
-on:
-  pull_request:
-    branches: [dev]
+on: workflow_dispatch
 
 jobs:
   build_and_test:
-    runs-on: ubuntu-latest
-    environment: development
+    runs-on: Mobi    
     env:
       TEST_USERNAME: postgres
       TEST_PASSWORD: password
